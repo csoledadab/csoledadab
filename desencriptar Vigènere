@@ -1,0 +1,19 @@
+l=("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+contraseña=input()
+mensaje=input()
+respuesta=[]
+contraseñaii=[]
+for y in mensaje:
+    respuesta.append(l.index(y))
+for y in contraseña:
+    contraseñaii.append(l.index(y))
+while len(contraseñaii)<len(respuesta):
+    for y in range(len(contraseñaii)):
+        contraseñaii.append(contraseñaii[y])
+lpr=[]
+for y in range(len(respuesta)):
+    lpr.append(respuesta[y]-contraseñaii[y])
+finish=""
+for y in lpr:
+    finish+= l[y]
+print(finish)
