@@ -1,0 +1,8 @@
+nstar=int(input())
+y=""
+if nstar>0:
+    for i in range(nstar):
+        y+="*"
+else:
+    y="-"
+print(y)
